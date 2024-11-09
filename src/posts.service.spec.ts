@@ -17,7 +17,7 @@ describe('PostsService', () => {
   });
 
   it('should find a post', () => {
-    
-    expect(postsService.find('1')?.text).toEqual( 'Some pre-existing post' );  
+    postsService.create(post)
+    expect(postsService.find('2')?.text).toEqual( post.text );  
   });
 });
